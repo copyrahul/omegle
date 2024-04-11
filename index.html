@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Epsile: Talk to strangers!</title>
+    <link rel="icon" type="image/png" href="img/epsile_logo16.png">
+    <link rel="stylesheet/less" type="text/css" href="style/epsile.less">
+    <script>
+        var less = {
+            env: "development"
+        };
+    </script>
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+    <script src="js/lib/less-1.7.0.min.js"></script>
+</head>
+<body>
+
+<section id="container">
+    <section id="chatWindow">
+        <section id="chatMain">
+            <div id="chatMainDiv"></div>
+        </section>
+        
+        <div id="isTypingDiv" class="consoleChat">Stranger&nbsp;is&nbsp;typing...</div>
+        
+        <section id="panelRow">
+            
+            <input type="button" value="Disconnect" id="disconnectButton" disabled>
+            <div id="chatAreaWrap">
+                <textarea id="chatArea" disabled="disabled"></textarea>
+            </div>
+        </section>
+    
+        <section id="peopleOnlineSection">
+            <span id="peopleOnlineSpan">0</span> online
+        </section>
+    </section>
+
+    <section id="welcomeScreen">
+    
+        <section id="startButtonDiv"><div>
+			<div id="description">
+				<center><h2>Pickachat: Talk to strangers!</h2></center> <p>Chat safely with strangers worldwide. If everyone is paired up, wait for a conversation to end.<br> Chats are anonymous;
+				strangers won't know about you unless you share.</p>
+				<br><br>
+				<strong>Note:</strong> <b>Your privacy is with you; safeguard yourself online. Happy chatting!</b>
+			</div>
+			
+            <br>
+            <input type="button" value="Start chatting!" onclick="Epsile.startChat();" class="button" id="startButton" disabled>
+        </div></section>
+        
+        <header>
+            <a href="./"><div id="logo"></div></a>
+        </header>
+        
+        <section id="badges">
+            <div>
+                <span id="sharebuttons">
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                    <div class="g-plusone"></div>
+                    <script type="text/javascript">
+                      (function() {
+                        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                        po.src = 'https://apis.google.com/js/plusone.js';
+                        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                      })();
+                    </script>
+                </span>
+            </div>
+        </section>
+    
+        <footer>
+            <a href="termsofuse.html" target="_blank">Terms And Conditions</a> ● <a href="http://socket.io/" target="_blank">Piracy Policy</a> ● <a href="http://expressjs.com/" target="_blank">Community Guideliness</a> - &copy; Pickachat ©2024
+        </footer>
+    
+    </section>
+</section>
+
+<audio id="alertSound">
+    <source src="media/alert.ogg" />
+    <source src="media/alert.mp3" />
+</audio>
+
+<script src="https://pickachat.live/socket.io/socket.io.js"></script> <!-- Replace 'your-custom-domain.com' with your actual custom domain -->
+<script src="js/epsile.js"></script>
+</body>
+</html>
